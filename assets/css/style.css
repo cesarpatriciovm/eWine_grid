@@ -1,0 +1,211 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    /* grid-template-rows: 1fr 10fr 1fr; */
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+
+nav {
+    background-color: #bb2649;
+    grid-area: nav;    
+}
+
+main {
+    grid-area: main;
+    background-color: #f5f5f5;
+}
+
+.item-nav {
+    display: flex;
+    justify-content: space-between;
+    /* height: 10vh; */
+}
+
+.item-nav h1 {
+    color: #ffc3d4;
+    font-size: 18px;
+    margin: auto 0;
+    padding-left: 10px;
+}
+
+.item-nav img {
+    width: 20px;
+    padding-right: 10px;
+}
+
+.filtro-productos {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.text-filtro.option {
+    font-size: 10px;
+    color: #4b4f5d;
+}
+
+.text-filtro.parrafo {
+    font-size: 12px;
+    color: #4b4f5d;
+    font-weight: 900;
+}
+
+.container-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #f35d74;
+}
+
+.card-producto {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 5px;
+    margin: auto;
+}
+
+.card-producto img {
+    width: 110px;
+    object-fit: cover;
+}
+
+.name-vino {
+    color: #4b4f5d;
+    font-size: 12px;
+}
+
+button {
+    background-color: #bb2649;
+    color: #ffc3d4;
+    font-size: 8px;
+    border-color: #bb2649;
+    border-style:dashed;
+    padding: 2px;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.paginas li {
+    border: 1px solid #4b4f5daa;
+    padding: 5px;    
+    color: #4b4f5d;
+    font-size: 12px;
+    margin: 0 4px;
+    margin-bottom: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.iconos-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fa-brands {
+    width: 10px;
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+    padding: 5px 0;
+    color: #ffc3d4;
+    font-weight: 900;
+}
+
+@media (max-width: 576px) {
+    menu {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {    
+    .grid-container {
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+    "nav main"
+    "footer main";
+    }
+    .container-items {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        /* gap: 5px 0; */
+        height: 90vh;
+        margin: auto;
+    }
+
+    nav {
+        height: 90vh;
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    footer {
+        height: 10vh;
+    }
+
+    .filtro-productos {
+        height: 5vh;
+    }
+
+    .container-paginas {
+        display: none;
+    }
+
+    .item-nav img {
+        display: none;
+    }
+
+    .item-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-nav {
+        list-style: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .menu-nav li {
+        padding: 10px;
+        color: #ffc3d4;
+        font-weight: 900;
+    }
+}
